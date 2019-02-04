@@ -1,0 +1,35 @@
+/* to learn super keyword using, concept think about the code execution output. 
+  here invoked variable, method, constructor is subclass by calling super keyword.
+*/
+package javaconcept;
+class superClass{
+    int i;
+    superClass(int j){
+     System.out.println("Superclass Constructor");
+    }
+   void superMethod(){
+    System.out.println("superclass method");
+   }
+}
+class SubClass extends superClass{
+    SubClass(){
+        super(10);
+    }
+   void subMethod(){
+     System.out.println(super.i);
+     super.superMethod();
+     System.out.println("subclass method");
+   }
+  void superMethod(){
+     System.out.println(super.i+100);
+     subMethod();
+     System.out.println("That's it!!");
+  }
+}
+class Pro{
+    public static void main(String ar[]){
+        SubClass a= new SubClass();
+        a.superMethod();
+    }
+}
+

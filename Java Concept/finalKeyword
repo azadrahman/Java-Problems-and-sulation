@@ -1,0 +1,45 @@
+/*learn final variable, method and class
+1. final variables can't change its behave like a constant
+2. final method can't be overrided in sub classes. but can be inherite.
+3. final class can't be extended or implemented.
+*/
+package javaconcept;
+class University{
+   final String name="Eastern University";
+  final int fees; //blank final variable
+   static final int regs;//static blank final variabl
+   static final int credit;
+   static{
+       regs=6000;
+       credit= 2500;
+   }
+   University(){
+       fees= 48000;
+   }
+   final void display(){
+        
+     System.out.println(name);
+     System.out.println("Undergraduate program in CSE");
+     System.out.println("semester fees: "+fees+" BDT");
+     System.out.println("registration fees: "+regs+" BDT");
+     System.out.println("Per credit fees: "+credit+ " BDT");
+    }
+   void display(int i){
+       System.out.println("Thanks for joining");
+   }
+}
+class Student extends University{
+    void display(int i){
+      System.out.println("Student Login web portal");
+      super.display();
+      super.display(1);
+    }
+}
+class PrintAll{
+    public static void main(String ar[]){
+        Student a= new Student();
+        a.display(10);
+        
+    }
+}
+

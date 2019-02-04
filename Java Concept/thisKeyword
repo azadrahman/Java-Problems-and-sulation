@@ -1,0 +1,35 @@
+/* to learn this keyword using concept think about the code execution output. 
+  here used variable, method, constructor by calling this keyword.
+*/
+package javaconcept;
+class A{
+    int i=100;
+    A(){
+      System.out.println("First constructor");
+    }
+    A(int j){
+        this();
+     System.out.println("second constructor");
+    }
+   void method1(){
+     System.out.println("1st Method");
+   }
+   void method2(){
+    System.out.println((this.i)*5);
+    this.method1();
+    System.out.println("2nd method ");
+   }
+   void method3(){
+     System.out.println(this.i+50);
+     this.method2();
+     System.out.println("3rd method");
+   }
+}
+
+class Program{
+    public static void main(String ar[]){
+        A a= new A(10);
+        a.method1();
+        a.method3();
+    }
+}

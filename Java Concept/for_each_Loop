@@ -1,0 +1,39 @@
+package javaconcept;
+/*
+in this program, used the concept of for-each loop/enhanced loop
+in here, for each loop and nested for-each loop both is used
+*/
+import java.util.ArrayList;
+
+public class for_each_Loop{
+    public static void main(String ar[]){
+    int [] arr={10,20,30,40,50,60,70,80,90,100};
+    String names[]={"Arjoo","Nirob","Azad","Arham"};
+ArrayList<String> list = new ArrayList<String>();
+list.add("First boy");
+list.add("Second boy");
+list.add("Third boy");
+list.add("Fourth boy");
+//use of for-each loop
+   for(String str: names){
+       System.out.println(str);
+   }
+   int sum=0;
+   for(int x : arr){
+       sum = sum+x;
+   }
+   System.out.println("Total: "+sum);
+  for(String st: list){
+      System.out.println(st);
+  }
+  int twoDarray[][]={{2,4,6,8,10},{5,10,15,20,25}};
+//nested for-each loop using two dimensional array
+  for(int oneDarray[]: twoDarray ){
+      System.out.print("[");
+      for(int a: oneDarray){
+          System.out.print(a+"\t");
+      }
+      System.out.println("]");
+  }
+    }
+}
